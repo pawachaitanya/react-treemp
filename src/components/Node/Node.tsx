@@ -19,8 +19,8 @@ class Node extends React.Component<INodeProps, {}> {
             name,
             id,
             label,
-            valueUnit,
             valueWithFormat,
+            valueUnit,
             hasChildren,
             xTranslated,
             yTranslated,
@@ -68,7 +68,7 @@ class Node extends React.Component<INodeProps, {}> {
                     </text>
                 </a>
                 {!hideNumberOfChildren && this._getNumberOfItemsRect()}
-                <title>{label + "\n" + valueWithFormat + " " + valueUnit }</title>
+                <title>{label + "\n" + valueUnit + " " + valueWithFormat }</title>
             </g>
         );
     }
@@ -128,8 +128,8 @@ class Node extends React.Component<INodeProps, {}> {
             label,
             textColor,
             fontSize,
-            valueUnit,
             valueWithFormat,
+            valueUnit,
             hasChildren,
             nodeTotalNodes,
             globalTotalNodes,
@@ -137,7 +137,7 @@ class Node extends React.Component<INodeProps, {}> {
          } = this.props;
 
         if (hasChildren === true) {
-            const fullLabel = hideValue ? label : label + "\xa0(" + valueWithFormat + " " +valueUnit + ")";
+            const fullLabel = hideValue ? label : label + "\xa0(" + valueUnit + " " +valueWithFormat + ")";
             return (
                 <tspan fontSize={fontSize} fill={textColor} dx={4} dy={fontSize} >
                     {fullLabel}
@@ -145,7 +145,7 @@ class Node extends React.Component<INodeProps, {}> {
             );
         } else {
             if (label) {
-                const fullLabel = hideValue ? label.split(/(?=[A-Z][^A-Z])/g) : label.split(/(?=[A-Z][^A-Z])/g).concat("(" +  valueWithFormat  + " " + valueUnit  + ")");
+                const fullLabel = hideValue ? label.split(/(?=[A-Z][^A-Z])/g) : label.split(/(?=[A-Z][^A-Z])/g).concat("(" +  valueUnit  + " " + valueWithFormat  + ")");
                 return fullLabel.map((item, index) => {
                     return (
                         <tspan fontSize={fontSize} fill={textColor} key={index} x={4} dy={fontSize} >
