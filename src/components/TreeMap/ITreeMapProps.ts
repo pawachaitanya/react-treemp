@@ -7,13 +7,13 @@ export interface ITreeMapProps {
     /*
         Unit for values. For example MB
     */
-    valueUnit?: string;
+   valueWithFormat?: string;
 
     /*
      * Format for the values
      * https://github.com/d3/d3-format#format
      */
-    valueFormat?: string;
+    valueUnit?: string;
 
     /*
      * Create and interpolates a background color range

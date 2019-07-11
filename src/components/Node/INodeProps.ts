@@ -59,7 +59,7 @@ export interface INodeProps {
     bgColor: string; // fill
     textColor: string;
     fontSize: number;
-    valueWithFormat: string;
+    valueUnit: string;
 
     // Events props
     onClick?: any;
@@ -67,7 +67,7 @@ export interface INodeProps {
     // Others
     hasChildren: boolean;
 
-    valueUnit: string;
+    valueWithFormat: string;
 
     url: string;
 
