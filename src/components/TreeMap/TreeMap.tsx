@@ -41,8 +41,8 @@ class TreeMap extends React.Component<ITreeMapProps, ITreeMapState> {
         data: null,
         height: 600,
         width: 600,
-        valueUnit: ",d",
-        valueFormat: "MB",
+        valueFormat: ",d",
+        valueUnit: "MB",
         disableBreadcrumb: false,
         colorModel: ColorModel.NumberOfChildren
     };
@@ -274,7 +274,7 @@ class TreeMap extends React.Component<ITreeMapProps, ITreeMapState> {
                 nodeTotalNodes={nodeTotalNodes}
                 globalTotalNodes={totalNodes}
                 isSelectedNode={id === this.state.selectedId}
-                valueFormat={this.props.valueFormat}
+                valueUnit={this.props.valueUnit}
                 hideNumberOfChildren={this.props.hideNumberOfChildren}
                 hideValue={this.props.hideValue}
             />

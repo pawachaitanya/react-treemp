@@ -3,8 +3,8 @@ export interface ITreeMapProps {
     width: number;
     height: number;
     data: any;
-    valueFormat?: string;
     valueUnit?: string;
+    valueFormat?: string;
     bgColorRangeLow?: string;
     bgColorRangeHigh?: string;
     disableBreadcrumb?: boolean;
