@@ -15,7 +15,7 @@ export default class App extends React.Component<{}, {}> {
                         width={width}
                         height={400}
                         data={data}
-                        valueUnit={"$"}
+                        valueUnit={"MB"}
                         colorModel={ColorModel.Depth}
                         // disableBreadcrumb
                         // hideNumberOfChildren

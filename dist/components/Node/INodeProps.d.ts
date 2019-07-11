@@ -31,10 +31,10 @@ export interface INodeProps {
     bgColor: string;
     textColor: string;
     fontSize: number;
-    valueUnit: string;
+    valueWithFormat: string;
     onClick?: any;
     hasChildren: boolean;
-    valueWithFormat: string;
+    valueUnit: string;
     url: string;
     hideNumberOfChildren?: boolean;
     hideValue?: boolean;

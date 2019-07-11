@@ -42,7 +42,7 @@ class TreeMap extends React.Component<ITreeMapProps, ITreeMapState> {
         height: 600,
         width: 600,
         valueFormat: ",d",
-        valueUnit: "$",
+        valueUnit: "MB",
         disableBreadcrumb: false,
         colorModel: ColorModel.NumberOfChildren
     };
