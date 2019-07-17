@@ -3083,6 +3083,7 @@
                         i = e.hasChildren,
                         u = (e.nodeTotalNodes, e.globalTotalNodes, e.hideValue);
                     if (!0 === i) {
+                        console.log(c)
                         var f = u ? t : t + "\n\n" + o + " " + c ;
                         return a.createElement("tspan", {
                             fontSize: r,
