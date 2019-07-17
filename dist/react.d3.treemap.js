@@ -2994,12 +2994,31 @@
                 return r(t, e), t.prototype.render = function() {
                     return this._getNestedFolderTypeNode()
                 }, t.prototype._getNestedFolderTypeNode = function() {
+                    function nFormatter(num, digits) {
+                        var si = [
+                          { value: 1, symbol: "" },
+                          { value: 1E3, symbol: "k" },
+                          { value: 1E6, symbol: "M" },
+                          { value: 1E9, symbol: "G" },
+                          { value: 1E12, symbol: "T" },
+                          { value: 1E15, symbol: "P" },
+                          { value: 1E18, symbol: "E" }
+                        ];
+                        var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+                        var i;
+                        for (i = si.length - 1; i > 0; i--) {
+                          if (num >= si[i].value) {
+                            break;
+                          }
+                        }
+                        return (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
+                      }
                     var e = this.props,
                         t = e.bgColor,
                         n = e.onClick,
                         r = (e.name, e.id),
                         o = e.label,
-                        i = nFormatter(e.valueWithFormat,1),
+                        i = String(nFormatter(parseInt(e.valueWithFormat.replace(',','')),1)),
                         u = e.valueUnit,
                         f = e.hasChildren,
                         s = e.xTranslated,
@@ -3039,7 +3058,7 @@
                         target: "_blank"
                     }, a.createElement("text", {
                         clipPath: "url(#clip-".concat(w, "-", r.toString(), ")")
-                    }, this._getLabelNewLine())), !y && this._getNumberOfItemsRect(), a.createElement("title", null, o + "\n" + u + " yo" + i + "\n"))
+                    }, this._getLabelNewLine())), !y && this._getNumberOfItemsRect(), a.createElement("title", null, o + "\n" + u + " " + i + "\n"))
                 }, t.prototype._getNumberItemsHeightByFontSize = function(e) {
                     return e
                 }, t.prototype._getNumberItemsWidthByNumberOfChars = function(e, t) {
