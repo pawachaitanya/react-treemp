@@ -3070,7 +3070,7 @@
                         }, f)
                     }
                     if (t) {
-                        var f = u ? t.split(/(?=[A-Z][^A-Z])/g) : t.split(/(?=[A-Z][^A-Z])/g) +  o + " " + c ;
+                        var f = u ? t.split(/(?=[A-Z][^A-Z])/g) : t.split(/(?=[A-Z][^A-Z])/g).concat( o + " " + c );
                         return f.map(function(e, t) {
                             return a.createElement("tspan", {
                                 fontSize: r,
