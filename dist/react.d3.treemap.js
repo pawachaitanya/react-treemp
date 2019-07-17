@@ -3082,8 +3082,9 @@
                         u = (e.nodeTotalNodes, e.globalTotalNodes, e.hideValue);
                     if (!0 === i) {
                         
-                        console.log(typeof(c))
-                        console.log(parseFloat(c.replace(',','.').replace(' ','')))
+                        console.log(parseFloat(c.replace(',','')))
+                        console.log(typeof(parseFloat(c.replace(',',''))))
+
                         var f = u ? t : t + "\n\n" + o + " " + c ;
                         return a.createElement("tspan", {
                             fontSize: r,
