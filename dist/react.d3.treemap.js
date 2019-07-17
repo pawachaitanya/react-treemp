@@ -3120,7 +3120,7 @@
                         u = (e.nodeTotalNodes, e.globalTotalNodes, e.hideValue);
                     if (!0 === i) {
                         
-                        console.log(parseFloat(c.replace(',','')))
+                        console.log(c.replace(',',''))
                         console.log(typeof(parseFloat(c.replace(',',''))))
 
                         var f = u ? t : t + "\n\n" + o + " " + c ;
