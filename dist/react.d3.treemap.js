@@ -3071,14 +3071,12 @@
                         y: o
                     }, u))
                 }, t.prototype._getLabelNewLine = function() {
-                    function kFormatter(num) {
-                        return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
-                    }
+                    
                     var e = this.props,
                         t = e.label,
                         n = e.textColor,
                         r = e.fontSize,
-                        c = parseFloat(e.valueWithFormat),
+                        c = Float(e.valueWithFormat),
                         o = e.valueUnit,
                         i = e.hasChildren,
                         u = (e.nodeTotalNodes, e.globalTotalNodes, e.hideValue);
