@@ -3083,7 +3083,7 @@
                     if (!0 === i) {
                         
                         console.log(typeof(c))
-                        console.log(c)
+                        console.log(parseFloat(c.replace(',','.').replace(' ','')))
                         var f = u ? t : t + "\n\n" + o + " " + c ;
                         return a.createElement("tspan", {
                             fontSize: r,
