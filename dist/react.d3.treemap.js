@@ -2972,6 +2972,25 @@
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
+                function nFormatter(num, digits) {
+                    var si = [
+                      { value: 1, symbol: "" },
+                      { value: 1E3, symbol: "k" },
+                      { value: 1E6, symbol: "M" },
+                      { value: 1E9, symbol: "G" },
+                      { value: 1E12, symbol: "T" },
+                      { value: 1E15, symbol: "P" },
+                      { value: 1E18, symbol: "E" }
+                    ];
+                    var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+                    var i;
+                    for (i = si.length - 1; i > 0; i--) {
+                      if (num >= si[i].value) {
+                        break;
+                      }
+                    }
+                    return (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
+                  }
                 return r(t, e), t.prototype.render = function() {
                     return this._getNestedFolderTypeNode()
                 }, t.prototype._getNestedFolderTypeNode = function() {
@@ -2981,7 +3000,7 @@
                         r = (e.name, e.id),
                         o = e.label,
                         i = e.valueWithFormat,
-                        u = e.valueUnit,
+                        u = nFormatter(e.valueUnit,1),
                         f = e.hasChildren,
                         s = e.xTranslated,
                         d = e.yTranslated,
