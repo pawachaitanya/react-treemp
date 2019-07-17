@@ -3094,7 +3094,7 @@
                         t = e.label,
                         n = e.textColor,
                         r = e.fontSize,
-                        c = nFormatter(parseFloat(e.valueWithFormat),1),
+                        c = String(nFormatter(parseFloat(e.valueWithFormat),1)),
                         o = e.valueUnit,
                         i = e.hasChildren,
                         u = (e.nodeTotalNodes, e.globalTotalNodes, e.hideValue);
