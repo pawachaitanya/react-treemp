@@ -3078,12 +3078,13 @@
                         t = e.label,
                         n = e.textColor,
                         r = e.fontSize,
-                        c = String(nFormatter(parseFloat(e.valueWithFormat))),
+                        c = e.valueWithFormat,
                         o = e.valueUnit,
                         i = e.hasChildren,
                         u = (e.nodeTotalNodes, e.globalTotalNodes, e.hideValue);
                     if (!0 === i) {
-                        console.log(c)
+                        
+                        console.log(typeof(c))
                         var f = u ? t : t + "\n\n" + o + " " + c ;
                         return a.createElement("tspan", {
                             fontSize: r,
