@@ -3039,7 +3039,7 @@
                         target: "_blank"
                     }, a.createElement("text", {
                         clipPath: "url(#clip-".concat(w, "-", r.toString(), ")")
-                    }, this._getLabelNewLine())), !y && this._getNumberOfItemsRect(), a.createElement("title", null, o + "\n" + u + " " + i + "\n"))
+                    }, this._getLabelNewLine())), !y && this._getNumberOfItemsRect(), a.createElement("title", null, o + "\n" + u + " yo" + i + "\n"))
                 }, t.prototype._getNumberItemsHeightByFontSize = function(e) {
                     return e
                 }, t.prototype._getNumberItemsWidthByNumberOfChars = function(e, t) {
