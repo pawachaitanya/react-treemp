@@ -3114,7 +3114,8 @@
                         t = e.label,
                         n = e.textColor,
                         r = e.fontSize,
-                        c = String(nFormatter(parseInt(e.valueWithFormat.replace(',','')),1)),
+                        // c = String(nFormatter(parseInt(e.valueWithFormat.replace(',','')),1)),
+                        c = e.valueWithFormat.replace(',','')
                         o = e.valueUnit,
                         i = e.hasChildren,
                         u = (e.nodeTotalNodes, e.globalTotalNodes, e.hideValue);
