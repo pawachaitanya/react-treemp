@@ -2812,7 +2812,7 @@
                         bgColor: t,
                         label: l,
                         name: l,
-                        fontSize: 14,
+                        fontSize: 16,
                         textColor: y,
                         className: "node",
                         hasChildren: p,
@@ -3111,7 +3111,7 @@
                         }, f)
                     }
                     if (t) {
-                        var f = u ? t.split(/(?=[A-Z][^A-Z])/g) : t.split(/(?=[A-Z][^A-Z])/g).concat( o + " " + c );
+                        var f = u ? t.split(/(?=[A-Z][^A-Z])/g) : t.split(/(?=[A-Z][^A-Z])/g).concat("\n" + o + " " + c );
                         return f.map(function(e, t) {
                             return a.createElement("tspan", {
                                 fontSize: r,
