@@ -3102,7 +3102,7 @@
                     if (!0 === i) {
                         
 
-                        var f = u ? t : t + "\n\n" + o + " " + c ;
+                        var f = u ? t : t + "\n" +"\n"+ o + " " + c ;
                         return a.createElement("tspan", {
                             fontSize: r,
                             fill: n,
