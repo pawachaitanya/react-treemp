@@ -3039,7 +3039,7 @@
                         target: "_blank"
                     }, a.createElement("text", {
                         clipPath: "url(#clip-".concat(w, "-", r.toString(), ")")
-                    }, this._getLabelNewLine())), !y && this._getNumberOfItemsRect(), a.createElement("title", null, o + "\n" + u + "" + i + "\n"))
+                    }, this._getLabelNewLine())), !y && this._getNumberOfItemsRect(), a.createElement("title", null, o + "\n" + u + i + "\n"))
                 }, t.prototype._getNumberItemsHeightByFontSize = function(e) {
                     return e
                 }, t.prototype._getNumberItemsWidthByNumberOfChars = function(e, t) {
@@ -3102,7 +3102,7 @@
                     if (!0 === i) {
                         
 
-                        var f = u ? t : t + "\n" +"\n"+ o + " " + c ;
+                        var f = u ? t : t + "\n" +"\n"+ o + c ;
                         return a.createElement("tspan", {
                             fontSize: r,
                             fill: n,
@@ -3111,7 +3111,7 @@
                         }, f)
                     }
                     if (t) {
-                        var f = u ? t.split(/(?=[A-Z][^A-Z])/g) : t.split(/(?=[A-Z][^A-Z])/g).concat("\n" + o + "" + c );
+                        var f = u ? t.split(/(?=[A-Z][^A-Z])/g) : t.split(/(?=[A-Z][^A-Z])/g).concat("\n" + o + c );
                         return f.map(function(e, t) {
                             return a.createElement("tspan", {
                                 fontSize: r,
